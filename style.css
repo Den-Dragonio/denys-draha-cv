@@ -1,28 +1,21 @@
 /* style.css - Cyber Glacier / Liquid Glass (Final Fixed Version) */
 
 :root {
-    /* --- Палітра Cyber Glacier --- */
-    --primary: #004AAD;
-    /* Глибокий синій (акценти, заголовки) */
-    --accent: #48BFE3;
-    /* Водний блакитний */
-    --text-main: #002c5e;
-    /* Дуже темний синій (основний текст) */
-    --text-secondary: #5a7d9a;
-    /* Сіро-блакитний (дати, підписи) */
+    /* --- Палітра Чисто-Біла / Нейтральна (Без блакитного відтінку) --- */
+    --primary: #222222; /* Чистий темно-сірий */
+    --accent: #EEEEEE;  /* Світло-сірий */
+    --text-main: #111111; /* Майже чорний */
+    --text-secondary: #666666; /* Нейтральний сірий */
 
     /* --- Налаштування Скла (Glassmorphism) --- */
-    --glass-bg: rgba(255, 255, 255, 0.25);
-    /* Висока прозорість карток */
-    --glass-border: 1px solid rgba(255, 255, 255, 0.6);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    --glass-blur: blur(10px);
-    /* Сильний блюр ("мильний" ефект) */
-    --bubble-shine: inset 0 0 20px rgba(255, 255, 255, 0.8);
-    /* Внутрішнє світіння */
+    --glass-bg: rgba(255, 255, 255, 0.15); /* Максимально прозорий скляний ефект */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    --glass-blur: blur(25px) saturate(180%);
+    --bubble-shine: inset 0 0 20px rgba(255, 255, 255, 0.3);
 
-    /* Холодне світіння для фонових елементів */
-    --neon-glow: 0 0 15px #B5F9FF;
+    /* Легке світіння для фонових елементів */
+    --neon-glow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 html {
@@ -43,53 +36,60 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    /* Холодний Градієнт (Cyber Glacier) */
-    background: linear-gradient(120deg, #FFFFFF, #A0D2EB, #48BFE3, #A0D2EB, #FFFFFF);
-    background-size: 400% 400%;
-    animation: gradientFlow 30s ease infinite;
-    /* Повільна зміна */
+    /* Базовий фон прибрано, щоб було видно промені (вони у z-index: -1) */
+    background: transparent;
 }
 
-@keyframes gradientFlow {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* --- Контейнер для бульбашок --- */
-#bubble-container {
+/* --- Сонячні промені (Sun rays background) --- */
+.sun-rays-container {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background: #EAEAEA; /* Чистий світло-сірий без синяви */
 }
 
-.bubble {
+.sun-rays {
     position: absolute;
-    bottom: -200px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    /* Дуже прозорі */
-    filter: blur(1px);
-    /* Легкий блюр самої бульбашки */
-    box-shadow:
-        inset 0 0 20px rgba(255, 255, 255, 0.5),
-        var(--neon-glow);
-    /* Зовнішнє холодне світіння */
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* Діагональні промені зверху зліва */
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 6%,
+        rgba(255, 255, 255, 1) 12%, /* Сліпучо-білі промені */
+        rgba(255, 255, 255, 0) 18%
+    );
+    filter: blur(12px);
     opacity: 0;
-    /* Анімація задається в JS */
+    transform-origin: top center;
+    /* Рух вправо та плавне згасання/поява */
+    animation: 
+        raysMove 25s ease-in-out infinite alternate,
+        raysFade 10s ease-in-out infinite alternate;
+        
+    /* Плавне згасання променів знизу */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+}
+
+@keyframes raysMove {
+    0% { transform: translateX(-15%); }
+    100% { transform: translateX(5%); }
+}
+
+@keyframes raysFade {
+    0% { opacity: 0; }       /* Плавно і повністю зникають (за хмарами) */
+    20% { opacity: 0; }
+    80% { opacity: 1; }      /* Плавно і яскраво з'являються */
+    100% { opacity: 1; }
 }
 
 /* --- ХЕДЕР (Виправлений) --- */
@@ -98,9 +98,10 @@ body {
     top: 0;
     width: 100%;
     padding: 15px 0;
-    /* Дуже прозора шапка */
+    /* Дуже прозора шапка як iOS */
     background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 100;
     transition: all 0.3s ease;
@@ -196,7 +197,7 @@ body {
 
 .progress-bar {
     height: 100%;
-    background: linear-gradient(90deg, #48BFE3 0%, #004AAD 100%);
+    background: linear-gradient(90deg, #E2E8F0 0%, #2D3748 100%);
     width: 0%;
     transition: width 0.1s;
 }
@@ -216,6 +217,7 @@ body {
 /* --- Стилі Карток (Glassmorphism) --- */
 .glass-card,
 .glass-bubble {
+    position: relative; /* Для позиціонування відблиску */
     background: var(--glass-bg);
     box-shadow: var(--glass-shadow), var(--bubble-shine);
     backdrop-filter: var(--glass-blur);
@@ -224,6 +226,57 @@ body {
     border-radius: 24px;
     padding: 30px;
     transition: transform 0.3s ease;
+}
+
+/* Агресивний світловий відблиск по краю (Sniper Glint) */
+.glass-card::before,
+.glass-bubble::before {
+    content: "";
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: radial-gradient(
+        800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+        rgba(255, 255, 255, 1) 0%,       /* Сліпучий центр */
+        rgba(255, 255, 255, 0.8) 10%,    /* Сильний ореол */
+        rgba(255, 255, 255, 0.3) 30%,    /* Далеке поширення рамкою */
+        transparent 50%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.8s ease; /* Плавне і довге затухання після відводу курсору */
+    z-index: 10;
+}
+
+/* Внутрішнє світіння від сонячного зайчика */
+.glass-card::after,
+.glass-bubble::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+        1000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+        rgba(255, 255, 255, 0.2) 0%,
+        transparent 40%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.8s ease; /* Плавне затухання */
+    z-index: 11;
+}
+
+/* Швидка поява відблиску при наведенні */
+.glass-card:hover::before,
+.glass-bubble:hover::before,
+.glass-card:hover::after,
+.glass-bubble:hover::after {
+    opacity: 1;
+    transition: opacity 0.2s ease; /* Швидко спалахує наче відблиск оптики */
 }
 
 .glass-bubble {
@@ -259,7 +312,7 @@ body {
 .sidebar-title {
     color: var(--primary);
     margin: 20px 0 10px;
-    border-bottom: 2px solid rgba(0, 74, 173, 0.1);
+    border-bottom: 2px solid rgba(45, 55, 72, 0.1);
     /* Легка лінія */
     padding-bottom: 5px;
     display: inline-block;
@@ -313,7 +366,7 @@ body {
     justify-content: center;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 10px rgba(0, 74, 173, 0.1);
+    box-shadow: 0 0 10px rgba(45, 55, 72, 0.1);
     transition: all 0.2s ease;
     text-decoration: none;
 }
@@ -321,7 +374,7 @@ body {
 .social-icons a:hover {
     color: #fff;
     background: var(--primary);
-    box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+    box-shadow: 0 4px 15px rgba(45, 55, 72, 0.3);
     transform: translateY(-2px);
 }
 
@@ -482,7 +535,7 @@ h2 {
 }
 
 .demo-link:hover {
-    background: #003380;
+    background: #1A202C;
 }
 
 .code-link {

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Draha CV</title>
     <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 384 512%22><path fill=%22%23004AAD%22 d=%22M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z%22/></svg>">
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 384 512%22><path fill=%22%23000000%22 d=%22M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z%22/></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -15,7 +15,10 @@
 
 <body>
 
-    <div id="bubble-container"></div>
+    <div class="sun-rays-container">
+        <div class="sun-rays"></div>
+    </div>
+
 
     <header class="header">
         <nav class="nav">
@@ -23,11 +26,9 @@
                 <a href="#about" class="nav-link">Про Мене</a>
                 <a href="#experience" class="nav-link">Досвід</a>
                 <a href="#education" class="nav-link">Освіта</a>
-                <a href="#achievements" class="nav-link">Проекти</a>
-                <a href="#achievements" class="nav-link">Навички</a>
 
                 <div class="lang-switcher">
-                    <a href="index.html" class="lang-link">EN</a>
+                    <a href="index.html" class="lang-link">ENG</a>
                     <span class="separator">|</span>
                     <span class="active-lang">УКР</span>
                 </div>
@@ -41,6 +42,11 @@
     <main class="main-grid">
 
         <aside class="sidebar glass-card">
+            <div class="sidebar-header" style="text-align: center; margin-bottom: 20px;">
+                <h1 style="font-size: 1.8rem; margin: 0;">Денис Драга</h1>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Junior Software Developer</p>
+            </div>
+
             <div class="photo-wrapper">
                 <img src="img.jpg" alt="Фото профілю" class="profile-photo">
             </div>
@@ -51,11 +57,8 @@
                     <li><i class="fas fa-map-marker-alt"></i> <strong>Локація:</strong><br>Брюссель, Бельгія</li>
                     <li><i class="fas fa-phone"></i> <strong>Телефон:</strong><br>+380 96 614 46 45</li>
                     <li><i class="fas fa-envelope"></i> <strong>Email:</strong><br><a
-                            href="mailto:denis.draga.aka.dragonio@gmail.com">drahadenys@gmail.com</a></li>
+                            href="mailto:drahadenys@gmail.com">drahadenys@gmail.com</a></li>
                 </ul>
-
-                <div class="contact-info-block">
-                </div>
 
                 <div class="social-icons">
                     <a href="https://t.me/@Denys_XO" target="_blank" title="Telegram">
@@ -67,9 +70,34 @@
                     <a href="viber://chat?number=380966144645" target="_blank" title="Viber">
                         <i class="fab fa-viber"></i>
                     </a>
+                    <a href="https://www.linkedin.com/in/denys-draha-b24a41227" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                     <a href="https://github.com/Den-Dragonio" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
+                </div>
+
+                <h3 class="sidebar-title">Мови</h3>
+                <ul class="simple-list">
+                    <li><strong>Англійська:</strong> Вільно</li>
+                    <li><strong>Українська:</strong> Вільно</li>
+                    <li><strong>Російська:</strong> Вільно</li>
+                    <li><strong>Французька:</strong> Базова (A1) (в процесі вивчення)</li>
+                    <li><strong>Нідерландська:</strong> Планую вивчати</li>
+                </ul>
+
+                <h3 class="sidebar-title">Навички</h3>
+                <div class="skills-grid" style="margin-bottom: 20px;">
+                    <span>Java</span>
+                    <span>C# / .NET</span>
+                    <span>SQL / SQLite / Firebase</span>
+                    <span>Git / GitHub</span>
+                    <span>Python</span>
+                    <span>HTML / CSS</span>
+                    <span>JavaScript</span>
+                    <span>Unity</span>
+                    <span>Figma</span>
                 </div>
 
                 <h3 class="sidebar-title">Інтереси</h3>
@@ -79,40 +107,43 @@
                     <li><i class="fas fa-basketball-ball"></i> Баскетбол</li>
                     <li><i class="fas fa-chess"></i> Шахи</li>
                 </ul>
-
-                <h3 class="sidebar-title">Мови</h3>
-                <ul class="simple-list">
-                    <li>Українська (Fluent)</li>
-                    <li>English (Upper Int.)</li>
-                    <li>Русский (Fluent)</li>
-                </ul>
             </div>
         </aside>
 
         <div class="content-area">
-
-            <section class="glass-bubble header-bubble">
-                <h1>Денис Драга</h1>
-                <p class="subtitle"> Junior Software Developer</p>
-            </section>
 
             <section id="about" class="glass-bubble">
                 <h2>Про Мене</h2>
                 <p>Універсальний Junior Software Developer з міцною базою в <strong>ООП</strong> (SOLID, GRASP),
                     структурах даних та архітектурних патернах. Моя основна експертиза зосереджена на
                     <strong>Java</strong> та <strong>C#/.NET</strong>, що доповнюється практичним досвідом роботи з
-                    Python та веб-інтерфейсами
-                    (HTML/CSS/JS).
+                    Python та веб-інтерфейсами (HTML/CSS/JS).
                     Фокусуюсь на написанні чистого, оптимізованого коду та швидко адаптуюсь до нових технологій. Готовий
-                    вирішувати
-                    складні backend-задачі та брати участь у розробці full-stack рішень.
+                    вирішувати складні backend-задачі та брати участь у розробці full-stack рішень.
                 </p>
+            </section>
+
+            <section id="projects" class="section-block glass-bubble">
+                <h2>Мої Проекти та Демо</h2>
+                <div class="projects-container">
+                    <article class="project-card">
+                        <h4>Інтерактивне портфоліо та Project Hub</h4>
+                        <p class="project-desc">Кастомна адаптивна веб-платформа, розроблена на Vanilla HTML, CSS та JavaScript.
+                            Створена для демонстрації різноманітного технічного стеку: від C#/.NET
+                            додатків і Python-скриптів до веб-проєктів та ігор на Unity (WebGL).</p>
+                        <div class="project-links">
+                            <a href="https://den-dragonio.github.io/my-apps/" target="_blank"
+                                class="project-link demo-link"><i class="fas fa-external-link-alt"></i> Демо</a>
+                            <a href="https://github.com/Den-Dragonio/my-apps" target="_blank"
+                                class="project-link code-link"><i class="fab fa-github"></i> Код</a>
+                        </div>
+                    </article>
+                </div>
             </section>
 
             <section id="experience" class="glass-bubble">
                 <h2>Досвід Роботи</h2>
                 <article class="item">
-
                     <h4>Software Engineer (Freelance / Власні проекти)</h4>
                     <p class="meta">2022 - Дотепер</p>
                     <ul class="experience-list">
@@ -127,12 +158,12 @@
                         <li>Пояснював складні концепції простою мовою (Soft Skills).</li>
                         <li>Навчив більше 10 учнів, покращивши їхні оцінки на 30%.</li>
                     </ul>
-
                 </article>
             </section>
 
             <section id="education" class="glass-bubble">
                 <h2>Освіта</h2>
+
                 <article class="item">
                     <h4>
                         Магістр, Комп'ютерні Науки
@@ -148,51 +179,21 @@
                             title="Подивитись диплом"></i>
                     </h4>
                     <p class="meta">ДТЕУ, 2020 - 2024</p>
-
                 </article>
                 <div class="item">
                     <h4>Курси:</h4>
                     <ul class="tags">
-                        <li>EPAM: Java Fundamentals (В процесі)</li>
+                        <li>EPAM: Java Fundamentals</li>
                         <li>CS50</li>
                         <li>Cisco CCNAv7</li>
                     </ul>
                 </div>
-            </section>
 
-            <section id="projects" class="section-block glass-bubble">
-                <h2>Мої Проекти та Демо</h2>
-
-                <div class="projects-container">
-
-                    <article class="project-card">
-                        <h4>Інтерактивне портфоліо та Project Hub</h4>
-                        <p class="project-desc">Кастомна адаптивна веб-платформа, розроблена на Vanilla HTML, CSS та
-                            JavaScript.
-                            Створена для демонстрації різноманітного технічного стеку: від C#/.NET
-                            додатків і Python-скриптів до веб-проєктів та ігор на Unity (WebGL).</p>
-                        <div class="project-links">
-                            <a href="https://den-dragonio.github.io/my-apps/" target="_blank"
-                                class="project-link demo-link"><i class="fas fa-external-link-alt"></i> Демо</a>
-                            <a href="https://github.com/Den-Dragonio/my-apps" target="_blank"
-                                class="project-link code-link"><i class="fab fa-github"></i> Код</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="achievements" class="glass-bubble">
-                <h2>Технічні Навички</h2>
-                <div class="skills-grid">
-                    <span>Java</span>
-                    <span>C# / .NET</span>
-                    <span>SQL / SQLite / Firebase</span>
-                    <span>Git / GitHub</span>
-                    <span>Python</span>
-                    <span>HTML / CSS</span>
-                    <span>JavaScript</span>
-                    <span>Unity</span>
-                    <span>Figma</span>
+                <div class="item" style="margin-top: 20px;">
+                    <h4>В планах:</h4>
+                    <ul class="experience-list">
+                        <li><strong>Вересень 2026:</strong> Заплановані курси французької мови.</li>
+                    </ul>
                 </div>
             </section>
 
