@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -22,16 +22,18 @@
 
 
     <header class="header">
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary">
             <div class="nav-links">
                 <a href="#about" class="nav-link">About me</a>
                 <a href="#experience" class="nav-link">Work experience</a>
                 <a href="#education" class="nav-link">Education</a>
 
                 <div class="lang-switcher">
-                    <span class="active-lang">ENG</span>
+                    <span class="active-lang" aria-current="page">ENG</span>
                     <span class="separator">|</span>
-                    <a href="index_uk.html" class="lang-link">UKR</a>
+                    <a href="index_nl.html" class="lang-link">NL</a>
+                    <span class="separator">|</span>
+                    <a href="index_fr.html" class="lang-link">FR</a>
                 </div>
             </div>
         </nav>
@@ -49,7 +51,7 @@
             </div>
 
             <div class="photo-wrapper">
-                <img src="img.jpg" alt="Фото профілю" class="profile-photo">
+                <img src="img.jpg" alt="Profile photo" class="profile-photo">
             </div>
 
             <div class="sidebar-content">
@@ -82,10 +84,10 @@
                 <h3 class="sidebar-title">Languages</h3>
                 <ul class="simple-list">
                     <li><strong>English:</strong> Fluent</li>
-                    <li><strong>Ukrainian:</strong> Fluent</li>
-                    <li><strong>Russian:</strong> Fluent</li>
-                    <li><strong>French:</strong> Basic (A1) (learning in progress)</li>
-                    <li><strong>Dutch:</strong> Plan to learn</li>
+                    <li><strong>Ukrainian:</strong> Fluent (Native)</li>
+                    <li><strong>Russian:</strong> Fluent (Native)</li>
+                    <li><strong>Dutch:</strong> Basic (A2)</li>
+                    <li><strong>French:</strong> Plan to learn</li>
                 </ul>
 
                 <h3 class="sidebar-title">Skills</h3>
@@ -129,18 +131,30 @@
                 <h2>Projects & demos</h2>
                 <div class="projects-container">
                     <article class="project-card">
-                        <h4>Personal Portfolio & Project Hub</h4>
-                        <p class="project-desc">A custom-built, responsive web platform developed with Vanilla HTML,
-                            CSS, and JavaScript.
-                            Designed to showcase a diverse technical stack, hosting playable Unity WebGL builds
-                            alongside C#/.NET applications,
-                            Python tools, and web projects.</p>
-                        <div class="project-links">
-                            <a href="https://den-dragonio.github.io/my-apps/" target="_blank"
-                                class="project-link demo-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="https://github.com/Den-Dragonio/my-apps" target="_blank"
-                                class="project-link code-link"><i class="fab fa-github"></i> Code</a>
+                        <div class="project-card-body">
+                            <h4>Personal Portfolio &amp; Project Hub</h4>
+                            <p class="project-desc">A custom-built, responsive web platform developed with Vanilla HTML,
+                                CSS, and JavaScript.
+                                Designed to showcase a diverse technical stack, hosting playable Unity WebGL builds
+                                alongside C#/.NET applications,
+                                Python tools, and web projects.</p>
+                            <div class="project-links">
+                                <a href="https://den-dragonio.github.io/my-apps/" target="_blank"
+                                    rel="noopener noreferrer" class="project-link demo-link"><i
+                                        class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Website</a>
+                            </div>
                         </div>
+                        <a href="https://den-dragonio.github.io/my-apps/" target="_blank" rel="noopener noreferrer"
+                            class="project-qr" aria-label="QR code for Personal Portfolio & Project Hub website"
+                            title="Scan QR code to open https://den-dragonio.github.io/my-apps/">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"
+                                aria-hidden="true">
+                                <path fill="#ffffff" d="M0 0h33v33H0z" />
+                                <path stroke="#000000"
+                                    d="M2 2.5h7m2 0h3m2 0h1m1 0h5m1 0h7M2 3.5h1m5 0h1m3 0h2m3 0h1m2 0h1m1 0h1m1 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h2m1 0h2m2 0h1m3 0h2m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m1 0h1m1 0h8m4 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m1 0h3m2 0h1m1 0h2m5 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M10 9.5h5m1 0h2m2 0h3M2 10.5h1m1 0h5m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h5M5 11.5h1m1 0h1m3 0h1m2 0h2m2 0h4m1 0h4m3 0h1M4 12.5h1m2 0h2m2 0h2m1 0h5m1 0h1m1 0h1m2 0h2M2 13.5h1m2 0h1m1 0h1m5 0h1m2 0h3m1 0h4m1 0h1m1 0h1m1 0h1M2 14.5h1m4 0h3m1 0h2m1 0h1m4 0h1m1 0h1m5 0h2M2 15.5h2m1 0h2m3 0h6m5 0h2m1 0h1m1 0h1m3 0h1M4 16.5h5m1 0h1m1 0h1m2 0h4m3 0h2m3 0h2M3 17.5h2m2 0h1m1 0h1m1 0h5m1 0h1m5 0h3m3 0h1M2 18.5h1m2 0h5m1 0h3m2 0h1m1 0h2m1 0h1m5 0h2M2 19.5h1m1 0h4m1 0h1m1 0h4m3 0h1m1 0h7m1 0h1m1 0h1M2 20.5h1m1 0h1m1 0h3m1 0h3m1 0h1m2 0h4m2 0h1m1 0h2m1 0h1M2 21.5h1m2 0h1m3 0h2m1 0h2m2 0h3m1 0h3m2 0h2m2 0h1M2 22.5h1m2 0h2m1 0h2m1 0h1m7 0h8m1 0h3M10 23.5h2m1 0h4m1 0h3m1 0h1m3 0h5M2 24.5h7m2 0h9m1 0h2m1 0h1m1 0h3M2 25.5h1m5 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h3m3 0h1m3 0h1M2 26.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h5m1 0h1M2 27.5h1m1 0h3m1 0h1m1 0h2m3 0h1m3 0h4m4 0h4M2 28.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h2m1 0h10M2 29.5h1m5 0h1m3 0h1m5 0h1m3 0h1m3 0h2m1 0h1M2 30.5h7m1 0h1m4 0h2m2 0h1m1 0h1m2 0h3m1 0h1" />
+                            </svg>
+                            <span>Scan QR</span>
+                        </a>
                     </article>
                 </div>
             </section>
@@ -171,16 +185,27 @@
                 <article class="item">
                     <h4>
                         Master degree, Computer Science
-                        <i class="fas fa-file-alt view-diploma" onclick="openDiploma('masters.png')"
-                            title="View Diploma"></i>
+                        <button type="button" class="diploma-icon-btn view-diploma" onclick="openDiploma('masters.png')"
+                            title="View Diploma" aria-label="View Master's diploma">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        </button>
+                        <a href="N261035042_Beslissing_Getekend%20Denys%20Draha.pdf" target="_blank"
+                            rel="noopener noreferrer" class="diploma-icon-btn view-diploma"
+                            title="View Flanders Equivalence Certificate (PDF)"
+                            aria-label="View Flanders level equivalence certificate (PDF)">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        </a>
                     </h4>
                     <p class="meta">NUBIP, 2024 - 2025</p>
+                    <p class="recognition-note"><i class="fas fa-check-circle" aria-hidden="true"></i> Recognized in Flanders (NARIC-Vlaanderen — Master's level equivalence)</p>
                 </article>
                 <article class="item">
                     <h4>
                         Bachelor degree, Software Engineering
-                        <i class="fas fa-file-alt view-diploma" onclick="openDiploma('bahelor.png')"
-                            title="View Diploma"></i>
+                        <button type="button" class="diploma-icon-btn view-diploma" onclick="openDiploma('bahelor.png')"
+                            title="View Diploma" aria-label="View Bachelor's diploma">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        </button>
                     </h4>
                     <p class="meta">DTEU, 2020 - 2024</p>
                 </article>
@@ -196,16 +221,16 @@
                 <div class="item" style="margin-top: 20px;">
                     <h4>Planned:</h4>
                     <ul class="experience-list">
-                        <li><strong>Septembre 2026:</strong> French classes planned.</li>
+                        <li><strong>January 2027:</strong> French classes planned.</li>
                     </ul>
                 </div>
             </section>
 
         </div>
     </main>
-    <div id="diplomaModal" class="modal">
-        <span class="close-btn">&times;</span>
-        <img class="modal-content" id="modalImage">
+    <div id="diplomaModal" class="modal" role="dialog" aria-modal="true" aria-label="Diploma preview">
+        <button type="button" class="close-btn" aria-label="Close">&times;</button>
+        <img class="modal-content" id="modalImage" alt="Diploma preview">
     </div>
     <script src="script.js"></script>
 </body>

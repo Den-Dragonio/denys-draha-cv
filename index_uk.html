@@ -21,7 +21,7 @@
 
 
     <header class="header">
-        <nav class="nav">
+        <nav class="nav" aria-label="Основна навігація">
             <div class="nav-links">
                 <a href="#about" class="nav-link">Про Мене</a>
                 <a href="#experience" class="nav-link">Досвід</a>
@@ -30,7 +30,9 @@
                 <div class="lang-switcher">
                     <a href="index.html" class="lang-link">ENG</a>
                     <span class="separator">|</span>
-                    <span class="active-lang">УКР</span>
+                    <a href="index_nl.html" class="lang-link">NL</a>
+                    <span class="separator">|</span>
+                    <a href="index_fr.html" class="lang-link">FR</a>
                 </div>
             </div>
         </nav>
@@ -81,10 +83,10 @@
                 <h3 class="sidebar-title">Мови</h3>
                 <ul class="simple-list">
                     <li><strong>Англійська:</strong> Вільно</li>
-                    <li><strong>Українська:</strong> Вільно</li>
-                    <li><strong>Російська:</strong> Вільно</li>
-                    <li><strong>Французька:</strong> Базова (A1) (в процесі вивчення)</li>
-                    <li><strong>Нідерландська:</strong> Планую вивчати</li>
+                    <li><strong>Українська:</strong> Вільно (рідна)</li>
+                    <li><strong>Російська:</strong> Вільно (рідна)</li>
+                    <li><strong>Нідерландська:</strong> Базова (A2)</li>
+                    <li><strong>Французька:</strong> Планую вивчати</li>
                 </ul>
 
                 <h3 class="sidebar-title">Навички</h3>
@@ -127,16 +129,28 @@
                 <h2>Мої Проекти та Демо</h2>
                 <div class="projects-container">
                     <article class="project-card">
-                        <h4>Інтерактивне портфоліо та Project Hub</h4>
-                        <p class="project-desc">Кастомна адаптивна веб-платформа, розроблена на Vanilla HTML, CSS та JavaScript.
-                            Створена для демонстрації різноманітного технічного стеку: від C#/.NET
-                            додатків і Python-скриптів до веб-проєктів та ігор на Unity (WebGL).</p>
-                        <div class="project-links">
-                            <a href="https://den-dragonio.github.io/my-apps/" target="_blank"
-                                class="project-link demo-link"><i class="fas fa-external-link-alt"></i> Демо</a>
-                            <a href="https://github.com/Den-Dragonio/my-apps" target="_blank"
-                                class="project-link code-link"><i class="fab fa-github"></i> Код</a>
+                        <div class="project-card-body">
+                            <h4>Інтерактивне портфоліо та Project Hub</h4>
+                            <p class="project-desc">Кастомна адаптивна веб-платформа, розроблена на Vanilla HTML, CSS та JavaScript.
+                                Створена для демонстрації різноманітного технічного стеку: від C#/.NET
+                                додатків і Python-скриптів до веб-проєктів та ігор на Unity (WebGL).</p>
+                            <div class="project-links">
+                                <a href="https://den-dragonio.github.io/my-apps/" target="_blank"
+                                    rel="noopener noreferrer" class="project-link demo-link"><i
+                                        class="fas fa-external-link-alt" aria-hidden="true"></i> Відкрити сайт</a>
+                            </div>
                         </div>
+                        <a href="https://den-dragonio.github.io/my-apps/" target="_blank" rel="noopener noreferrer"
+                            class="project-qr" aria-label="QR-код для сайту Інтерактивне портфоліо та Project Hub"
+                            title="Відскануйте QR-код, щоб відкрити https://den-dragonio.github.io/my-apps/">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"
+                                aria-hidden="true">
+                                <path fill="#ffffff" d="M0 0h33v33H0z" />
+                                <path stroke="#000000"
+                                    d="M2 2.5h7m2 0h3m2 0h1m1 0h5m1 0h7M2 3.5h1m5 0h1m3 0h2m3 0h1m2 0h1m1 0h1m1 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h2m1 0h2m2 0h1m3 0h2m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m1 0h1m1 0h8m4 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m1 0h3m2 0h1m1 0h2m5 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M10 9.5h5m1 0h2m2 0h3M2 10.5h1m1 0h5m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h5M5 11.5h1m1 0h1m3 0h1m2 0h2m2 0h4m1 0h4m3 0h1M4 12.5h1m2 0h2m2 0h2m1 0h5m1 0h1m1 0h1m2 0h2M2 13.5h1m2 0h1m1 0h1m5 0h1m2 0h3m1 0h4m1 0h1m1 0h1m1 0h1M2 14.5h1m4 0h3m1 0h2m1 0h1m4 0h1m1 0h1m5 0h2M2 15.5h2m1 0h2m3 0h6m5 0h2m1 0h1m1 0h1m3 0h1M4 16.5h5m1 0h1m1 0h1m2 0h4m3 0h2m3 0h2M3 17.5h2m2 0h1m1 0h1m1 0h5m1 0h1m5 0h3m3 0h1M2 18.5h1m2 0h5m1 0h3m2 0h1m1 0h2m1 0h1m5 0h2M2 19.5h1m1 0h4m1 0h1m1 0h4m3 0h1m1 0h7m1 0h1m1 0h1M2 20.5h1m1 0h1m1 0h3m1 0h3m1 0h1m2 0h4m2 0h1m1 0h2m1 0h1M2 21.5h1m2 0h1m3 0h2m1 0h2m2 0h3m1 0h3m2 0h2m2 0h1M2 22.5h1m2 0h2m1 0h2m1 0h1m7 0h8m1 0h3M10 23.5h2m1 0h4m1 0h3m1 0h1m3 0h5M2 24.5h7m2 0h9m1 0h2m1 0h1m1 0h3M2 25.5h1m5 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h3m3 0h1m3 0h1M2 26.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h5m1 0h1M2 27.5h1m1 0h3m1 0h1m1 0h2m3 0h1m3 0h4m4 0h4M2 28.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h2m1 0h10M2 29.5h1m5 0h1m3 0h1m5 0h1m3 0h1m3 0h2m1 0h1M2 30.5h7m1 0h1m4 0h2m2 0h1m1 0h1m2 0h3m1 0h1" />
+                            </svg>
+                            <span>Scan QR</span>
+                        </a>
                     </article>
                 </div>
             </section>
@@ -167,16 +181,27 @@
                 <article class="item">
                     <h4>
                         Магістр, Комп'ютерні Науки
-                        <i class="fas fa-file-alt view-diploma" onclick="openDiploma('masters.png')"
-                            title="Подивитись диплом"></i>
+                        <button type="button" class="diploma-icon-btn view-diploma" onclick="openDiploma('masters.png')"
+                            title="Подивитись диплом" aria-label="Подивитись диплом магістра">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        </button>
+                        <a href="N261035042_Beslissing_Getekend%20Denys%20Draha.pdf" target="_blank"
+                            rel="noopener noreferrer" class="diploma-icon-btn view-diploma"
+                            title="Подивитись рішення про еквівалентність у Фландрії (PDF)"
+                            aria-label="Подивитись документ про визнання рівня диплома у Фландрії (PDF)">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        </a>
                     </h4>
                     <p class="meta">НУБіП, 2024 - 2025</p>
+                    <p class="recognition-note"><i class="fas fa-check-circle" aria-hidden="true"></i> Підтверджено у Фландрії (NARIC-Vlaanderen — еквівалентність рівня магістра)</p>
                 </article>
                 <article class="item">
                     <h4>
                         Бакалавр, Інженерія Програмного Забезпечення
-                        <i class="fas fa-file-alt view-diploma" onclick="openDiploma('bahelor.png')"
-                            title="Подивитись диплом"></i>
+                        <button type="button" class="diploma-icon-btn view-diploma" onclick="openDiploma('bahelor.png')"
+                            title="Подивитись диплом" aria-label="Подивитись диплом бакалавра">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        </button>
                     </h4>
                     <p class="meta">ДТЕУ, 2020 - 2024</p>
                 </article>
@@ -192,7 +217,7 @@
                 <div class="item" style="margin-top: 20px;">
                     <h4>В планах:</h4>
                     <ul class="experience-list">
-                        <li><strong>Вересень 2026:</strong> Заплановані курси французької мови.</li>
+                        <li><strong>Січень 2027:</strong> Заплановані курси французької мови.</li>
                     </ul>
                 </div>
             </section>
@@ -200,9 +225,9 @@
         </div>
     </main>
 
-    <div id="diplomaModal" class="modal">
-        <span class="close-btn">&times;</span>
-        <img class="modal-content" id="modalImage">
+    <div id="diplomaModal" class="modal" role="dialog" aria-modal="true" aria-label="Перегляд диплома">
+        <button type="button" class="close-btn" aria-label="Закрити">&times;</button>
+        <img class="modal-content" id="modalImage" alt="Перегляд диплома">
     </div>
 
     <script src="script.js"></script>

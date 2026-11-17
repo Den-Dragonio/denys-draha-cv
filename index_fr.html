@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draha CV</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 384 512%22><path fill=%22%23000000%22 d=%22M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z%22/></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="sun-rays-container">
+        <div class="sun-rays"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav" aria-label="Navigation principale">
+            <div class="nav-links">
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#experience" class="nav-link">Expérience</a>
+                <a href="#education" class="nav-link">Formation</a>
+
+                <div class="lang-switcher">
+                    <a href="index.html" class="lang-link">ENG</a>
+                    <span class="separator">|</span>
+                    <a href="index_nl.html" class="lang-link">NL</a>
+                    <span class="separator">|</span>
+                    <span class="active-lang" aria-current="page">FR</span>
+                </div>
+            </div>
+        </nav>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </header>
+
+    <main class="main-grid">
+
+        <aside class="sidebar glass-card">
+            <div class="sidebar-header" style="text-align: center; margin-bottom: 20px;">
+                <h1 style="font-size: 1.8rem; margin: 0;">Denys Draha</h1>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Junior Software Developer</p>
+            </div>
+
+            <div class="photo-wrapper">
+                <img src="img.jpg" alt="Photo de profil" class="profile-photo">
+            </div>
+
+            <div class="sidebar-content">
+                <h3 class="sidebar-title">Informations personnelles</h3>
+                <ul class="info-list">
+                    <li><i class="fas fa-map-marker-alt"></i> <strong>Localisation :</strong><br>Bruxelles, Belgique</li>
+                    <li><i class="fas fa-phone"></i> <strong>Téléphone :</strong><br>+32 496 64 97 36</li>
+                    <li><i class="fas fa-envelope"></i> <strong>E-mail :</strong><br><a
+                            href="mailto:drahadenys@gmail.com">drahadenys@gmail.com</a></li>
+                </ul>
+
+                <div class="social-icons">
+                    <a href="https://t.me/@Denys_XO" target="_blank" title="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="https://wa.me/0966144645" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="viber://chat?number=380966144645" target="_blank" title="Viber">
+                        <i class="fab fa-viber"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/denys-draha-b24a41227" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Den-Dragonio" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
+                <h3 class="sidebar-title">Langues</h3>
+                <ul class="simple-list">
+                    <li><strong>Anglais :</strong> Courant</li>
+                    <li><strong>Ukrainien :</strong> Courant (Langue maternelle)</li>
+                    <li><strong>Russe :</strong> Courant (Langue maternelle)</li>
+                    <li><strong>Néerlandais :</strong> Élémentaire (A2)</li>
+                    <li><strong>Français :</strong> Prévu d'apprendre</li>
+                </ul>
+
+                <h3 class="sidebar-title">Compétences</h3>
+                <div class="skills-grid" style="margin-bottom: 20px;">
+                    <span>Java</span>
+                    <span>C# / .NET</span>
+                    <span>SQL / SQLite / Firebase</span>
+                    <span>Git / GitHub</span>
+                    <span>Python</span>
+                    <span>HTML / CSS</span>
+                    <span>JavaScript</span>
+                    <span>Unity</span>
+                    <span>Figma</span>
+                </div>
+
+                <h3 class="sidebar-title">Centres d'intérêt</h3>
+                <ul class="simple-list">
+                    <li><i class="fas fa-book-open"></i> Lecture</li>
+                    <li><i class="fas fa-dumbbell"></i> Salle de sport</li>
+                    <li><i class="fas fa-basketball-ball"></i> Basketball</li>
+                    <li><i class="fas fa-chess"></i> Échecs</li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content-area">
+
+            <section id="about" class="glass-bubble">
+                <h2>À propos de moi</h2>
+                <p>Développeur logiciel junior polyvalent avec une solide maîtrise de la <strong>POO</strong> (SOLID,
+                    GRASP), des structures de données et des patrons d'architecture. Mon expertise principale repose sur
+                    <strong>Java</strong> et <strong>C#/.NET</strong>, complétée par une expérience pratique en Python
+                    et en technologies front-end (HTML/CSS/JS). Je privilégie l'écriture d'un code propre et optimisé
+                    et je m'adapte rapidement à de nouvelles piles technologiques. Prêt à relever des défis de logique
+                    back-end complexe et à contribuer à des solutions d'entreprise full-stack.
+                </p>
+            </section>
+
+            <section id="projects" class="section-block glass-bubble">
+                <h2>Projets &amp; démos</h2>
+                <div class="projects-container">
+                    <article class="project-card">
+                        <div class="project-card-body">
+                            <h4>Portfolio Personnel &amp; Hub de Projets</h4>
+                            <p class="project-desc">Une plateforme web responsive sur mesure développée en Vanilla HTML,
+                                CSS et JavaScript. Conçue pour présenter une stack technique variée, hébergeant des builds
+                                Unity WebGL jouables ainsi que des applications C#/.NET, des outils Python et des projets
+                                web.</p>
+                            <div class="project-links">
+                                <a href="https://den-dragonio.github.io/my-apps/" target="_blank"
+                                    rel="noopener noreferrer" class="project-link demo-link"><i
+                                        class="fas fa-external-link-alt" aria-hidden="true"></i> Visiter le site</a>
+                            </div>
+                        </div>
+                        <a href="https://den-dragonio.github.io/my-apps/" target="_blank" rel="noopener noreferrer"
+                            class="project-qr" aria-label="Code QR pour Portfolio Personnel & Hub de Projets"
+                            title="Scannez le code QR pour ouvrir https://den-dragonio.github.io/my-apps/">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"
+                                aria-hidden="true">
+                                <path fill="#ffffff" d="M0 0h33v33H0z" />
+                                <path stroke="#000000"
+                                    d="M2 2.5h7m2 0h3m2 0h1m1 0h5m1 0h7M2 3.5h1m5 0h1m3 0h2m3 0h1m2 0h1m1 0h1m1 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h2m1 0h2m2 0h1m3 0h2m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m1 0h1m1 0h8m4 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m1 0h3m2 0h1m1 0h2m5 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M10 9.5h5m1 0h2m2 0h3M2 10.5h1m1 0h5m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h5M5 11.5h1m1 0h1m3 0h1m2 0h2m2 0h4m1 0h4m3 0h1M4 12.5h1m2 0h2m2 0h2m1 0h5m1 0h1m1 0h1m2 0h2M2 13.5h1m2 0h1m1 0h1m5 0h1m2 0h3m1 0h4m1 0h1m1 0h1m1 0h1M2 14.5h1m4 0h3m1 0h2m1 0h1m4 0h1m1 0h1m5 0h2M2 15.5h2m1 0h2m3 0h6m5 0h2m1 0h1m1 0h1m3 0h1M4 16.5h5m1 0h1m1 0h1m2 0h4m3 0h2m3 0h2M3 17.5h2m2 0h1m1 0h1m1 0h5m1 0h1m5 0h3m3 0h1M2 18.5h1m2 0h5m1 0h3m2 0h1m1 0h2m1 0h1m5 0h2M2 19.5h1m1 0h4m1 0h1m1 0h4m3 0h1m1 0h7m1 0h1m1 0h1M2 20.5h1m1 0h1m1 0h3m1 0h3m1 0h1m2 0h4m2 0h1m1 0h2m1 0h1M2 21.5h1m2 0h1m3 0h2m1 0h2m2 0h3m1 0h3m2 0h2m2 0h1M2 22.5h1m2 0h2m1 0h2m1 0h1m7 0h8m1 0h3M10 23.5h2m1 0h4m1 0h3m1 0h1m3 0h5M2 24.5h7m2 0h9m1 0h2m1 0h1m1 0h3M2 25.5h1m5 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h3m3 0h1m3 0h1M2 26.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h5m1 0h1M2 27.5h1m1 0h3m1 0h1m1 0h2m3 0h1m3 0h4m4 0h4M2 28.5h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h2m1 0h10M2 29.5h1m5 0h1m3 0h1m5 0h1m3 0h1m3 0h2m1 0h1M2 30.5h7m1 0h1m4 0h2m2 0h1m1 0h1m2 0h3m1 0h1" />
+                            </svg>
+                            <span>Scanner QR</span>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="experience" class="glass-bubble">
+                <h2>Expérience professionnelle</h2>
+                <article class="item">
+                    <h4>Software Engineer (Freelance / Projets personnels)</h4>
+                    <p class="meta">2022 - Présent</p>
+                    <ul class="experience-list">
+                        <li>Conception d'architectures applicatives orientées objet en C# et .NET.</li>
+                        <li>Développement de systèmes de gestion de données (sérialisation JSON) et de logiques
+                            d'interface utilisateur complexes.</li>
+                        <li>Optimisation des performances du code et de la mémoire pour les plateformes mobiles.</li>
+                    </ul>
+
+                    <h4>Professeur particulier (Mathématiques / Anglais)</h4>
+                    <p class="meta">2018 - 2019</p>
+                    <ul class="experience-list">
+                        <li>Explication de concepts complexes dans un langage simple et accessible.</li>
+                        <li>Accompagnement de plus de 10 élèves, améliorant leurs résultats de 30%.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="education" class="glass-bubble">
+                <h2>Formation</h2>
+
+                <article class="item">
+                    <h4>
+                        Master, Informatique
+                        <button type="button" class="diploma-icon-btn view-diploma" onclick="openDiploma('masters.png')"
+                            title="Voir le diplôme" aria-label="Voir le diplôme de Master">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        </button>
+                        <a href="N261035042_Beslissing_Getekend%20Denys%20Draha.pdf" target="_blank"
+                            rel="noopener noreferrer" class="diploma-icon-btn view-diploma"
+                            title="Voir la décision d'équivalence en Flandre (PDF)"
+                            aria-label="Voir le certificat d'équivalence de niveau en Flandre (PDF)">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        </a>
+                    </h4>
+                    <p class="meta">NUBIP, 2024 - 2025</p>
+                    <p class="recognition-note"><i class="fas fa-check-circle" aria-hidden="true"></i> Reconnu en Flandre (NARIC-Vlaanderen — équivalence de niveau Master)</p>
+                </article>
+                <article class="item">
+                    <h4>
+                        Bachelier, Génie Logiciel
+                        <button type="button" class="diploma-icon-btn view-diploma" onclick="openDiploma('bahelor.png')"
+                            title="Voir le diplôme" aria-label="Voir le diplôme de Bachelier">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        </button>
+                    </h4>
+                    <p class="meta">DTEU, 2020 - 2024</p>
+                </article>
+                <div class="item">
+                    <h4>Cours :</h4>
+                    <ul class="tags">
+                        <li>EPAM: Java Fundamentals</li>
+                        <li>CS50</li>
+                        <li>Cisco CCNAv7</li>
+                    </ul>
+                </div>
+
+                <div class="item" style="margin-top: 20px;">
+                    <h4>Prévu :</h4>
+                    <ul class="experience-list">
+                        <li><strong>Janvier 2027 :</strong> Cours de français prévus.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <div id="diplomaModal" class="modal" role="dialog" aria-modal="true" aria-label="Aperçu du diplôme">
+        <button type="button" class="close-btn" aria-label="Fermer">&times;</button>
+        <img class="modal-content" id="modalImage" alt="Aperçu du diplôme">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

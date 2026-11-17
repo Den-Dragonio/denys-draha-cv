@@ -25,17 +25,24 @@ window.onscroll = function() {
 const modal = document.getElementById("diplomaModal");
 const modalImg = document.getElementById("modalImage");
 const closeBtn = document.querySelector(".close-btn");
+let lastFocusedElement = null;
 
 // Функция открытия (вызывается при клике на иконку)
 function openDiploma(imageSrc) {
+    lastFocusedElement = document.activeElement;
     modal.style.display = "block";
     modalImg.src = imageSrc; // Устанавливаем картинку
     document.body.style.overflow = "hidden"; // Запрещаем скролл сайта
+    if (closeBtn) {
+        closeBtn.focus();
+    }
 }
 
 // Закрытие при клике на крестик
-closeBtn.onclick = function() {
-    closeModal();
+if (closeBtn) {
+    closeBtn.onclick = function() {
+        closeModal();
+    };
 }
 
 // Закрытие при клике ВНЕ картинки (на темный фон)
@@ -43,16 +50,21 @@ window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
     }
-}
+};
 
 // Закрытие клавишей ESC
 document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
+    if (event.key === "Escape" && modal && modal.style.display === "block") {
         closeModal();
     }
 });
 
 function closeModal() {
+    if (!modal) return;
     modal.style.display = "none";
     document.body.style.overflow = "auto"; // Возвращаем скролл
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+        lastFocusedElement.focus();
+        lastFocusedElement = null;
+    }
 }
