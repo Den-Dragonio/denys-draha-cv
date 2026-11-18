@@ -469,8 +469,13 @@ h2 {
 .tags {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 5px;
+}
+
+.tags + .tags {
+    margin-top: 8px;
 }
 
 .tags li {
