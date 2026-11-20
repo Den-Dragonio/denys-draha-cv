@@ -348,6 +348,19 @@ body {
     font-size: 0.9em;
 }
 
+.simple-list li.lang-item-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.sidebar-cert-link {
+    margin-left: 0;
+    flex-shrink: 0;
+    font-size: 1em;
+}
+
 /* Соціальні іконки */
 .social-icons {
     margin-top: 15px;
